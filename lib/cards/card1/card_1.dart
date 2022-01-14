@@ -4,12 +4,12 @@ import 'package:only_cards/design/styles.dart';
 class Card1 extends StatelessWidget {
   const Card1({
     Key? key,
+    required this.cardHeight,
+    required this.cardWidth,
   }) : super(key: key);
-
+  final double cardHeight, cardWidth;
   @override
   Widget build(BuildContext context) {
-    const cardHeight = 367.0;
-    const cardWidth = 360.0;
     return Padding(
       padding: const EdgeInsets.all(10),
       child: SizedBox(
@@ -62,7 +62,7 @@ class Card1 extends StatelessWidget {
               ),
               Image.asset(
                 'assets/card1/card-image.png',
-                height: 200,
+                fit: BoxFit.cover,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
